@@ -1,0 +1,65 @@
+<div class="container">
+<h2> Your personal informations</h2>
+      <p> Your current username : {{user?.username}}</p>
+      <p> Your current email : {{user?.email}}</p>
+
+      <p> Your current id : {{user?._id}}</p>
+
+    <!-- <div *ngIf="userTruc.currentUser.role == 'admin'"> -->
+        <!-- <button class="btn" (click)="deleteClick()"> Delete my account </button> -->
+    
+
+
+    <!-- test  -->
+
+
+
+    
+    <!-- <div class="modal" [class.is-active]="courseEdit" id="edit-course"> 
+        <div>
+            <p class="modal-card-title">Edit Course</p>
+            <button (click)="courseOn()" class="delete">DELETE</button>
+          </div>-->
+         
+         
+            <label class="label">Username</label>
+              <input [(ngModel)]="editCredsUser.username" class="input" placeholder="Text input" type="text" value = "{{user?.username}}">
+            <label class="label">Email</label>
+                <input [(ngModel)]="editCredsUser.email" class="input" placeholder="Text input" type="text" value = "{{user?.email}}">
+                <br>
+                <button (click)="onEditSubmit()" class="button is-primary modal-save">Save changes</button>
+                <!-- <a (click)="courseOn()" class="button modal-cancel">Cancel</a> -->
+
+<br>
+<button class="btn" (click)="deleteClick()"> Delete </button>
+
+                <button class="btn"><a routerLink="/"> Back </a> </button>
+
+      </div>
+
+    <!-- </div> -->
+
+
+    <!-- <div class='section profile-heading'>
+        <div class='columns is-mobile is-multiline'>
+  
+          <div class=' billy '>
+            <p>
+              <span class='title is-bold'>{{course?.name}}</span>
+              <br>
+              <a class ='button is-primary is-outlined' (click)="courseOn()" id ='edit-course' style ='margin: 5px 0'>
+                Edit Course
+              </a>
+              <br>
+            </p>
+            <p class='tagline'>
+              {{course?.description}}
+            </p>
+          </div>
+    
+    
+  </div>
+</div> -->
+
+
+

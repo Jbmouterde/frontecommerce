@@ -1,0 +1,18 @@
+<div *ngIf="userTruc.currentUser.role == 'admin'">
+        <div  *ngFor="let oneUser of users" >
+
+                <div >
+                    <h4>{{oneUser.username}}</h4>
+                   
+                    <p>{{oneUser.email}}</p>
+                    <p>{{oneUser.role}}</p>
+                
+                    
+                    <p>{{oneUser._id}}</p>
+                    <a id ="details-link"[routerLink]="['/users', oneUser._id]">
+                <button> more details </button></a>
+                    </div>
+                
+                    </div> 
+</div>
+
