@@ -1,58 +1,31 @@
+
+
+
 <form (ngSubmit)="articleSubmit()"> 
   <div class="form-group">
     
-      Artcile Title
-      <input type="text"[(ngModel)]="formCreds.title"  name="title" class="form-control"required placeholder="Title of your reports...">
+      Username
+      <input type="text"[(ngModel)]="formCreds.creator"  name="creator" class="form-control"required placeholder="Your username">
    
   </div>
-  <br>
-
-
   <div class="form-group">
-      <label>
-        Type of Reports : 
-        <select [(ngModel)]="formCreds.type" name="type"for="type">
-            <option value="">Type of Report</option>  
-            
-              <option name="bags" value="bags">bags</option>
-              <option name="teeshirt" value="teeshirt">teeshirt</option>
-              <option name="pants" value="pants">pants</option>
-          </select>
-        </label>
-      </div>
-
-
-      <div class="form-group">
-          
-            Date : 
-            <input type="date" [(ngModel)]="formCreds.date" name="date" class="form-control">
-          
-        </div>
-        <br>
-
-        <div class="form-group">
-            
-              Summary : 
-              <input type="text" [(ngModel)]="formCreds.description" name="description"  placeholder="Just a small description of your topic.">
-           
-          </div>
-          <br>
     
-      
-          
-      
-        
-
-                <div class="form-group">
-                    
-                      Image : 
-                      <input type="imageUrl" [(ngModel)]="formCreds.imageUrl" name="imageUrl" class="form-control" placeholder="Insert an image">
-                    
-                </div>
-
-        
-
-
+    Message
+    <input type="text"[(ngModel)]="formCreds.description"  name="description" class="form-control"required placeholder="message...">
+ 
+</div>
+  <br>
                         <button type="submit" class="btn btn-success">Submit</button>
 
            </form>
+
+           <div  *ngFor="let oneArticle of articles" >
+
+            <div >
+                <h4>{{oneArticle.creator}} say : {{oneArticle.description}}</h4>
+               
+            
+                
+                </div>
+            
+                </div> 

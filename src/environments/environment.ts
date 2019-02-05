@@ -7,7 +7,8 @@ export const environment = {
   backUrl : 'http://localhost:3000', 
   mapsKey : "AIzaSyAbsDqOb54l-4NXptl4QZz17OieIkHGq6I", 
   googleAnalitics : 'UA-119006261-1', 
-  stripesKey : 'pk_test_NLInK4w6r3f4X88AjNLlig4k'
+  stripesKey : 'pk_test_NLInK4w6r3f4X88AjNLlig4k',
+  token: '835e8225b9cb46a9b35cd8d8e6f9acbf'
 };
 
 /*

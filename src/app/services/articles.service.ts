@@ -51,8 +51,8 @@ updateLike(articleId){
 }
 //
 // API NEWS 
-getNews(){
-  return this.ajaxTruc.get('https://newsapi.org/v2/top-headlines?sources=national-geographic&apiKey=17ff854720b449c6bbd72574e7a18d9e')
+getWeather(){
+  return this.ajaxTruc.get('http://api.openweathermap.org/data/2.5/weather?q=Paris,fr&APPID=50ce80304a8fdf925c340c3c55021336')
   .toPromise();
 }
 
@@ -60,36 +60,20 @@ getNews(){
 
 export class Article {
   _id : string; 
-  title : string; 
-  date : Date; 
+  creator : string; 
   description : string;
-  email : string;
-  imageUrl : string ; 
-  type : string ; 
+
   // like : number = 0;
 
 };
 
 export class Creds {
-  title : string; 
-  date : Date; 
+  creator : string; 
   description : string;
-  imageUrl : string ; 
-  type : string ; 
   // like : number = 0;
 
 };
 
-export class News {
-  
-  source: {
-    id: number,
-    name: string
-};
-author: string;
-title: string;
-description: string;
-url: string;
-urlToImage: string;
-publishedAt: Date;
+export class Weather {
+
 }

@@ -1,2 +1,70 @@
-<p>
-future chat room</p>
+<div class="my-container">
+  <div class="row">
+      <div class="col-md-5">
+          <div class="v-sep-20"></div>
+          <div class="panel panel-primary" *ngIf="joinned; else joinroom">
+              
+              <div #scrollMe class="panel-body">
+                  <ul class="chat">
+                      <li *ngFor="let c of chats">
+
+                        <div class="item-right" *ngIf="c.username===msgData.username">
+                          <div class="chat-body">
+                              <div class="header">
+                                <span class="text-beige">{{ c.updated_at | date: 'medium' }}</span>
+                                <b>{{ c.username }}</b>
+                              </div>
+                              <p class="message-right">{{ c.message }}</p>
+                          </div>
+                          <div class="chat-img">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=ME" alt="User Avatar" class="img-circle" />
+                          </div>
+                          <div class="clear-both"></div>
+                        </div>
+
+                        
+                          <div class="item-left"  *ngIf="c.username!==msgData.username">
+                            <div class="chat-body">
+                                <div class="header">
+                                  <b>{{ c.username }}</b>
+                                    <span class="text-beige">{{ c.updated_at | date: 'medium' }}</span>
+                                </div>
+                                <p class="message-left">{{ c.message }}</p>
+                            </div>
+                            <div class="chat-img">
+                              <img src="http://placehold.it/50/FA6F57/fff&text=U" alt="User Avatar" class="img-circle" />
+                            </div>
+                            <div class="clear-both"></div>
+                          </div>
+                        
+                        <div class="clear-both"></div>
+                      </li>
+                      <div class="clear-both"></div>
+                  </ul>
+              </div>
+              <div class="panel-footer">
+                <form (ngSubmit)="sendMessage()" #msgForm="ngForm">
+                  <div class="input-group">
+                      <input type="hidden" [(ngModel)]="msgData.room" name="room" />
+                      <input type="hidden" [(ngModel)]="msgData.username" name="username" />
+                      <input id="btn-input" type="text" [(ngModel)]="msgData.message" name="message" class="form-control input-sm" placeholder="Type your message here..." required="" />
+                      <span class="input-group-btn">
+                          <button class="bt-send btn btn-warning btn-sm" id="btn-chat" [disabled]="!msgForm.form.valid">Send</button>
+                          <button type="button" class="waves-effect waves-light bt-leave btn deep-orange darken-4" (click)="logout()">Leave the chat room</button>
+                          <div class="clear-both"></div>
+                      </span>
+                  </div>
+                </form>
+              </div>
+
+              <div class="panel-heading">
+                  <div class="btn-group pull-right">
+                      <!-- <button type="button" class="btn deep-orange darken-4" (click)="logout()">Leave the chat room</button> -->
+                  </div>
+              </div>
+          </div>
+          <ng-template #joinroom>
+            <button (click)="joinRoom()" class="bt-join waves-effect waves-light btn brown darken-3">Enter the chat room</button>
+          </ng-template>
+      </div>
+  </div>

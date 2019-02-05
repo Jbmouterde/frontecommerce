@@ -1,0 +1,161 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+.chat
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chat img {
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+}
+
+.chat li
+{
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    /* border-bottom: 1px dotted #B3A9A9; */
+}
+
+.item-right {
+    width:70%;
+    float: right;
+}
+
+.item-right .chat-body {
+    float: left;
+    width:80%;
+}
+
+.item-right .chat-img {
+    float: left;
+    margin-left:10px;
+}
+
+.item-right .header {
+    text-align: right;
+}
+
+.text-beige {
+    color: #a99473;
+}
+
+.item-left {
+    width:70%;
+    float: left;
+}
+
+.item-left .chat-body {
+    float: right;
+    width:80%;
+}
+
+.item-left .chat-img {
+    float: right;
+    margin-right:10px;
+}
+
+.item-left .header {
+    text-align: left;
+}
+
+
+
+
+.message-right {
+    margin: 0;
+    color: #fff;
+    background: #4e342e;
+    padding:20px;
+    border-radius:10px;
+    width:100%;
+}
+
+.message-left {
+    margin: 0;
+    color: #000000;
+    background: rgba(0, 0, 0, 0.25);
+    padding:20px;
+    border-radius:10px;
+}
+
+/* .panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+} */
+
+.panel-body
+{
+    overflow-y: scroll;
+    /* height: 250px; */
+    max-height: 350px;
+    margin-bottom: 7px;
+    -webkit-box-shadow: inset 0 2px 30px rgba(0,0,0,0.2);
+    box-shadow: inset 0 2px 30px rgba(0,0,0,0.2);
+}
+
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+.bt-send {
+    float: left;
+    border-radius: 20px;
+    height: 42px;
+    padding-top: 3px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.bt-leave, .bt-join {
+    float: right;
+    border-radius: 20px;
+    height: 42px;
+    padding-top: 3px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.bt-leave:hover {
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.281);
+    background: rgb(214,119,79); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(214,119,79,1) 0%, rgba(191,54,12,1) 35%, rgba(191,54,12,1) 72%, rgba(135,42,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(214,119,79,1) 0%,rgba(191,54,12,1) 35%,rgba(191,54,12,1) 72%,rgba(135,42,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(214,119,79,1) 0%,rgba(191,54,12,1) 35%,rgba(191,54,12,1) 72%,rgba(135,42,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6774f', endColorstr='#872a00',GradientType=0 );
+}
+.bt-join:hover {
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.281);
+    background: #b99385;
+    background: -moz-linear-gradient(top, rgb(185, 147, 133) 0%, #795548 50%, #4e342e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgb(185, 147, 133) 0%,#795548 50%, #4e342e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgb(185, 147, 133) 0%,#795548 50%, #4e342e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b99385', endColorstr='#4e342e',GradientType=0 );
+}
+
+.bt-send:hover {
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.281);
+    background: #b2dfdb;
+    background: -moz-linear-gradient(top, #b2dfdb 0%, #4db6ac 50%, #009688 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #b2dfdb 0%,#4db6ac 50%, #009688 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #b2dfdb 0%,#4db6ac 50%, #009688 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2dfdb', endColorstr='#009688',GradientType=0 );
+}

@@ -16,6 +16,9 @@ import { AddComponent } from './add/add.component';
 import { UserComponent } from './user/user.component';
 import { AdminComponent } from './admin/admin.component';
 import { ChatComponent } from './chat/chat.component';
+import { WeatherComponent } from './weather/weather.component';
+import { MessagesService } from './services/messages.service';
+
 
 
 @NgModule({
@@ -29,6 +32,7 @@ import { ChatComponent } from './chat/chat.component';
     UserComponent,
     AdminComponent,
     ChatComponent,
+    WeatherComponent
     
   ],
   imports: [
@@ -37,7 +41,7 @@ import { ChatComponent } from './chat/chat.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [UserService, ArticlesService],
+  providers: [UserService, ArticlesService, MessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

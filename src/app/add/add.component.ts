@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ViewChild } from '@angular/core';
-import { ArticlesService, Creds } from '../services/articles.service';
+import { ArticlesService, Creds, Article } from '../services/articles.service';
 
 import { ElementRef, NgZone } from '@angular/core';
 import { FormControl } from '@angular/forms';
@@ -14,6 +14,7 @@ import { FormControl } from '@angular/forms';
 export class AddComponent implements OnInit {
 
   formCreds : Creds = new Creds();
+  articles : Article[] = []
 
 
   constructor(
@@ -22,11 +23,20 @@ export class AddComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.userTruc.getList()
+    .then((result : Article[])=>{
+      this.articles = result
+      console.log(result)
+    })
+    .catch((err)=>{
+      console.log("Article list error")
+      console.log(err)
+    })
   }
   articleSubmit(){
     this.userTruc.addArticle(this.formCreds)
     .then((result)=>{
-      this.resTruc.navigateByUrl('/')
+      this.resTruc.navigateByUrl('/add')
     })
     .catch((err)=>{
       console.log("Log in error")

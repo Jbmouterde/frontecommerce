@@ -1,10 +1,10 @@
 <div class="container">
 
 <div *ngIf="!userTruc.currentUser">
-        <button class=" btn btn-outline-success"> <a routerLink="/login">Log in 
+        <button> <a routerLink="/login">Log in 
           </a>   </button>
 
-<button class=" btn btn-outline-success"> <a routerLink="/signup">Sign up 
+<button> <a routerLink="/signup">Sign up 
            </a>          </button>
 </div>
 
@@ -12,13 +12,22 @@
 
 
 
-    <h1> Test home page </h1>
-    <button class=" btn btn-outline-success"> <a routerLink="/chat"> Navigate to the chat room</a>
-       
+    <h1> HomePage </h1>
+<div class="lache">
+
+
+    <button> <a routerLink="/chat"> Navigate to the chat room</a>
     </button>
-<button class=" btn btn-outline-success" *ngIf="userTruc.currentUser.role == 'admin'">
+      <button> <a routerLink="/weather"> Check the weather</a>
+
+    </button>
+<!-- <button *ngIf="userTruc.currentUser.role == 'admin'">
                                             <a class="" routerLink="/admin">All users</a>
-</button>
+</button> -->
 
 </div>
 </div>
+
+</div>
+
+

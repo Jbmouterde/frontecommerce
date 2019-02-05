@@ -111,6 +111,7 @@ export class User {
   role : string;
   email : string; 
   picture : string; 
+  message : string;
   //? make it optional
   updated_at?: Date ; 
   created_at: Date ; 
@@ -119,6 +120,7 @@ export class User {
 export class LoginCredentials {
   username : string; 
   password : string;
+  message : string;
   email : string; 
   picture : string; 
 }
