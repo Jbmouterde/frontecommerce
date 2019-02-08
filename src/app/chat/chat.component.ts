@@ -80,13 +80,13 @@ export class ChatComponent implements OnInit {
       });
     }
   
-  //   logout() {
-  //     var date = new Date();
-  //     var user = JSON.parse(localStorage.getItem("user"));
-  //     this.socket.emit('save-message', { room: user.room, username: user.username, message: 'Left this room', updated_at: date });
-  //     localStorage.removeItem("user");
-  //     this.joinned = false;
-  // }
+    logout() {
+      var date = new Date();
+      var user = JSON.parse(localStorage.getItem("user"));
+      this.socket.emit('save-message', { room: user.room, username: user.username, message: 'Left this room', updated_at: date });
+      localStorage.removeItem("user");
+      this.joinned = false;
+  }
 
 }
 
