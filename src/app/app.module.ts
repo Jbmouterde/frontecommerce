@@ -18,7 +18,14 @@ import { AdminComponent } from './admin/admin.component';
 import { ChatComponent } from './chat/chat.component';
 import { WeatherComponent } from './weather/weather.component';
 import { MessagesService } from './services/messages.service';
+import { BookingComponent } from './booking/booking.component';
 
+
+import { CommonModule } from '@angular/common';
+import { FlatpickrModule } from 'angularx-flatpickr';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -32,7 +39,8 @@ import { MessagesService } from './services/messages.service';
     UserComponent,
     AdminComponent,
     ChatComponent,
-    WeatherComponent
+    WeatherComponent, 
+    BookingComponent
     
   ],
   imports: [
@@ -41,7 +49,15 @@ import { MessagesService } from './services/messages.service';
 
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule, 
+
+    CommonModule,
+    NgbModalModule,
+    FlatpickrModule.forRoot(),
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory
+    })
   ],
   providers: [UserService, ArticlesService, MessagesService],
   bootstrap: [AppComponent]

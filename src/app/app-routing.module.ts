@@ -9,6 +9,7 @@ import { UserComponent } from './user/user.component';
 import { AdminComponent } from './admin/admin.component';
 import { ChatComponent } from './chat/chat.component';
 import { WeatherComponent } from './weather/weather.component';
+import { BookingComponent } from './booking/booking.component';
 
 const routes: Routes = [
   { path : 'login', component : LoginComponent},
@@ -19,9 +20,12 @@ const routes: Routes = [
 
   { path : 'users/:blahId', component : UserComponent},
   { path : 'admin', component : AdminComponent},
+  { path : 'booking', component : BookingComponent},
 
   { path : '', component : HomeComponent},
-  { path : '**', component : ErrorComponent}
+
+  { path : '**', component : ErrorComponent}, 
+
 
 ];
 
