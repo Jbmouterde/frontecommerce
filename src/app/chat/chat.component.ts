@@ -12,7 +12,7 @@ import { MessagesService } from '../services/messages.service';
 })
 export class ChatComponent implements OnInit {
 
-      @ViewChild('scrollMe') private myScrollContainer: ElementRef;
+      @ViewChild('scrollMe',  { static: true }) private myScrollContainer: ElementRef;
 
       chats: any;
       joinned: boolean = false;

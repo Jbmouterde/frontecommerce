@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
+// import { HttpModule } from '@angular/http';
 import{ HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
@@ -20,12 +20,13 @@ import { WeatherComponent } from './weather/weather.component';
 import { MessagesService } from './services/messages.service';
 import { BookingComponent } from './booking/booking.component';
 
-
+import 'flatpickr/dist/flatpickr.css'; 
 import { CommonModule } from '@angular/common';
 import { FlatpickrModule } from 'angularx-flatpickr';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -45,13 +46,11 @@ import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
-
     AppRoutingModule,
     HttpClientModule,
     FormsModule, 
-
     CommonModule,
+    BrowserAnimationsModule,
     NgbModalModule,
     FlatpickrModule.forRoot(),
     CalendarModule.forRoot({
