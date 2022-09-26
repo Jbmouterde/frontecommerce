@@ -31,7 +31,7 @@
     "express": "^4.17.1",
     "flatpickr": "^4.6.1",
     "leaflet": "^1.5.1",
-    "pubnub": "^4.24.2",
+    "pubnub": "^4.37.0",
     "pubnub-angular": "^4.2.0",
     "rxjs": "~6.5.2",
     "rxjs-compat": "^6.5.2",
